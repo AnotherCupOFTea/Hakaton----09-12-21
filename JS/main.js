@@ -48,41 +48,105 @@ async function addUser(event) {
 formSend.on("submit", addUser);
 
 //  Read
-<<<<<<< HEAD
+let products = [];
+
 async function getStudent(API) {
   let response = await axios(API);
-  console.log(response);
+
+  let student = response.data;
+
+  products = student;
+
+  handlePagination();
+}
+
+function render(data) {
+  tbody.html("");
+  data.forEach((item, index) => {
+    tbody.append(`
+          <tr>
+              <td>${item.id}</td>
+              <td>${item.name}</td>
+              <td>${item.surname}</td>
+              <td>${item.phone}</td>
+              <td>${item.weekKpi}</td>
+              <td>${item.monthKpi}</td>
+              <td>
+                 <button class="btn btn-outline-warning">Подробнее</button>
+              </td>
+              <td>
+                  <button id="${item.id}" class="btn btn-outline-warning btn-delete">	&#10060</button>
+               </td>
+          </tr>
+      `);
+  });
 }
 
 getStudent(API);
-=======
-async function getStudent(API){
-    let response = await axios(API); 
-    let student = response.data;
-    tbody.html("");
-    student.forEach((item, index) => {
-        tbody.append(`
-        <tr>
-            <td>${item.id}</td>
-            <td>${item.name}</td>
-            <td>${item.surname}</td>
-            <td>${item.phone}</td>
-            <td>${item.weekKpi}</td>
-            <td>${item.monthKpi}</td>
-            <td>
-               <button class="btn btn-outline-warning">Подробнее</button>
-            </td>
-            <td>
-                <button id="${item.id}" class="btn btn-outline-warning btn-delete">	&#10060</button>
-             </td>
-        </tr>
-    `)
-    })
-       
-    
-  
-    
+
+// ! Pagination
+
+const productsPerPages = 1;
+let pagesCount = 1;
+let currentPage = 1;
+let totalProductsCount = 0;
+
+function handlePagination() {
+  let indexOfLastProduct = currentPage * productsPerPages;
+  let indexOfFirstProduct = indexOfLastProduct - productsPerPages;
+  const currentProducts = products.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+  totalProductsCount = products.length;
+  pagesCount = Math.ceil(totalProductsCount / productsPerPages);
+  addPagination(pagesCount);
+  render(currentProducts);
 }
 
-getStudent(API);
->>>>>>> 0ff2782c5b3eb641bf91ec6230fa7bee59c5e3da
+let pagination = $(".pagination");
+
+function addPagination(pagesCount) {
+  console.log(pagesCount);
+  pagination.html("");
+  pagination.append(`
+    <li class="page-item ${+currentPage === 1 ? "disabled" : ""}">
+        <a class="page-link prev-item" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    `);
+  for (let i = 1; i <= pagesCount; i++) {
+    pagination.append(`
+            <li class="page-item pagination-item"><a class="page-link" href="#">${i}</a></li>
+        `);
+  }
+  pagination.append(`
+    <li class="page-item ${+currentPage === pagesCount ? "disabled" : ""}">
+        <a class="page-link next-item" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>  
+    `);
+}
+
+function paginate(event) {
+  let newPage = event.target.innerText;
+  currentPage = newPage;
+  handlePagination();
+}
+
+$(document).on("click", ".pagination-item", paginate);
+
+function prevPage() {
+  currentPage--;
+  handlePagination();
+}
+
+function nextPage() {
+  currentPage++;
+  handlePagination();
+}
+
+$(document).on("click", ".prev-item", prevPage);
+$(document).on("click", ".next-item", nextPage);
