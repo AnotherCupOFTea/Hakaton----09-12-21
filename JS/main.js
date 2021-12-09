@@ -6,4 +6,11 @@ let inputPhone = $(".inp-phone");
 let inputWeekKpi = $(".inp-week_KPI");
 let inputMonthKpi = $(".inp-month_KPI");
 
-function addUser(API) {}
+function addUser(event) {
+  event.preventDefault();
+  let name = inputName.val().trim();
+  let surname = inputSurname.val().trim();
+  let phone = inputPhone.val().trim();
+  let weekKpi = inputWeekKpi.val().trim();
+  let monthKpi = inputMonthKpi.val().trim();
+}
