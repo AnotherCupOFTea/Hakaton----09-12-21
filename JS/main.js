@@ -1,4 +1,5 @@
 // ! Create
+const API = " http://localhost:8001/students";
 let formSend = $(".form-send");
 
 let inputName = $(".inp-name");
@@ -34,4 +35,11 @@ function addUser(event) {
   }
 }
 
+//  Read
+
+
+function getStudent(api){
+    fetch(API)
+    
+}
 formSend.on("submit", addUser);
