@@ -1,3 +1,13 @@
 {
-    "students": []
+  "students": [
+    {
+      "name": "Erjan",
+      "surname": "Osmonov",
+      "phone": "91239",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "image": "sdfs",
+      "id": 1
+    }
+  ]
 }
