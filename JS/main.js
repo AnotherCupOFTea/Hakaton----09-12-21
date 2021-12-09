@@ -8,6 +8,7 @@ let inputPhone = $(".inp-phone");
 let inputWeekKpi = $(".inp-week_KPI");
 let inputMonthKpi = $(".inp-month_KPI");
 let inputImage = $(".inp-image");
+let tbody = $("tbody");
 
 async function addUser(event) {
   event.preventDefault();
@@ -44,9 +45,19 @@ async function addUser(event) {
   inputImage.val("");
 }
 
-//  Read
 
+
+
+
+formSend.on("submit", addUser);
+
+//  Read
+async function getStudent(API){
+    let response = await axios(API); 
+    console.log(response)
+    
 function getStudent(api) {
   fetch(API);
 }
-formSend.on("submit", addUser);
+
+getStudent(API)
