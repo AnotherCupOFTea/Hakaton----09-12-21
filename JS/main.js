@@ -36,7 +36,7 @@ async function addUser(event) {
   }
 
   await axios.post(API, newUser);
-
+  getStudent(API);
   inputName.val("");
   inputSurname.val("");
   inputPhone.val("");
@@ -54,10 +54,30 @@ formSend.on("submit", addUser);
 //  Read
 async function getStudent(API){
     let response = await axios(API); 
-    console.log(response)
+    let student = response.data;
+    tbody.html("");
+    student.forEach((item, index) => {
+        tbody.append(`
+        <tr>
+            <td>${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.surname}</td>
+            <td>${item.phone}</td>
+            <td>${item.weekKpi}</td>
+            <td>${item.monthKpi}</td>
+            <td>
+               <button class="btn btn-outline-warning">Подробнее</button>
+            </td>
+            <td>
+                <button id="${item.id}" class="btn btn-outline-warning btn-delete">	&#10060</button>
+             </td>
+        </tr>
+    `)
+    })
+       
     
-function getStudent(api) {
-  fetch(API);
+  
+    
 }
 
-getStudent(API)
+getStudent(API);
