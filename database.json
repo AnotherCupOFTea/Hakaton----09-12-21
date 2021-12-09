@@ -8,6 +8,15 @@
       "monthKpi": "100",
       "image": "sdfs",
       "id": 1
+    },
+    {
+      "name": "Saparali",
+      "surname": "Akmatali uulu",
+      "phone": "0755410910",
+      "weekKpi": "101",
+      "monthKpi": "101",
+      "image": "https://cdn.pocket-lint.com/r/s/320x/assets/images/151442-cameras-feature-stunning-photos-from-the-national-sony-world-photography-awards-2020-image1-1y52ltoia3.jpg?v1",
+      "id": 2
     }
   ]
 }
