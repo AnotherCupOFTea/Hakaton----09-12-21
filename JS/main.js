@@ -10,7 +10,7 @@ let inputMonthKpi = $(".inp-month_KPI");
 let inputImage = $(".inp-image");
 let tbody = $("tbody");
 
-function addUser(event) {
+async function addUser(event) {
   event.preventDefault();
   let name = inputName.val().trim();
   let surname = inputSurname.val().trim();
@@ -34,6 +34,15 @@ function addUser(event) {
       return;
     }
   }
+
+  await axios.post(API, newUser);
+
+  inputName.val("");
+  inputSurname.val("");
+  inputPhone.val("");
+  inputWeekKpi.val("");
+  inputMonthKpi.val("");
+  inputImage.val("");
 }
 
 
@@ -47,6 +56,8 @@ async function getStudent(API){
     let response = await axios(API); 
     console.log(response)
     
+function getStudent(api) {
+  fetch(API);
 }
 
 getStudent(API)
