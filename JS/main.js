@@ -1,5 +1,5 @@
 // ! Create
-const API = " http://localhost:8001/students";
+const API = "http://localhost:8001/students";
 let formSend = $(".form-send");
 
 let inputName = $(".inp-name");
@@ -8,6 +8,7 @@ let inputPhone = $(".inp-phone");
 let inputWeekKpi = $(".inp-week_KPI");
 let inputMonthKpi = $(".inp-month_KPI");
 let inputImage = $(".inp-image");
+let tbody = $("tbody");
 
 function addUser(event) {
   event.preventDefault();
@@ -35,11 +36,17 @@ function addUser(event) {
   }
 }
 
+
+
+
+
+formSend.on("submit", addUser);
+
 //  Read
-
-
-function getStudent(api){
-    fetch(API)
+async function getStudent(API){
+    let response = await axios(API); 
+    console.log(response)
     
 }
-formSend.on("submit", addUser);
+
+getStudent(API)
