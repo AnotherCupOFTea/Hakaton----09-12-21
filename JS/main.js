@@ -45,19 +45,12 @@ async function addUser(event) {
   inputImage.val("");
 }
 
-
-
-
-
 formSend.on("submit", addUser);
 
 //  Read
-async function getStudent(API){
-    let response = await axios(API); 
-    console.log(response)
-    
-function getStudent(api) {
-  fetch(API);
+async function getStudent(API) {
+  let response = await axios(API);
+  console.log(response);
 }
 
-getStudent(API)
+getStudent(API);
