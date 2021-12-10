@@ -119,6 +119,7 @@ async function getStudentToMore(event) {
   editForm.attr("id", id);
 }
 
+
 $(document).on("click", ".btn-edit", getStudentToMore);
 
 async function saveEditedStudent(event) {
