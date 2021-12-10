@@ -158,12 +158,12 @@ async function getStudent(API) {
   student.forEach((item) => {
     tbody.append(`
         <tr>
-            <td>${item.id}</td>
-            <td>${item.name}</td>
-            <td>${item.surname}</td>
-            <td>${item.phone}</td>
-            <td>${item.weekKpi}</td>
-            <td>${item.monthKpi}</td>
+            <td class="td">${item.id - 1}</td>
+            <td class="td">${item.name}</td>
+            <td class="td">${item.surname}</td>
+            <td class="td">${item.phone}</td>
+            <td class="td">${item.weekKpi}</td>
+            <td class="td">${item.monthKpi}</td>
             <td>
                <button class="btn btn-outline-warning podrob" id="${item.id}">Подробнее</button>
             </td>
@@ -177,39 +177,80 @@ async function getStudent(API) {
 
 render(products);
 
-// async function deleteStudent(event) {
-//   let id = event.currentTarget.id;
-//   await axios.delete(`${API}/${id}`);
-//   render(products);
-// }
+async function deleteStudent(event) {
+  let id = event.currentTarget.id;
+  await axios.delete(`${API}/${id}`);
+  render(products);
+}
 
-// $(document).on("click", ".btn-delete", deleteStudent);
+$(document).on("click", ".btn-delete", deleteStudent);
 
-// //  взять данные на копкку подробнее
-// let modalM = $(".modal-m");
+//  взять данные на копкку подробнее
+let modalM = $(".modal-m");
 
-// async function getStudentToMore(event) {
-//   let id = event.currentTarget.id;
-//   let response = await axios(`${API}/${id}`);
-//   let { data } = response;
-//   modalM.html("");
-//   modalM.append(`
-//                 <div class="modal-podrob ">
-//                         <div class="modal-more d-flex">
-//                             <div class="modal-more__img"> <img src="${data.image}" alt=""></div>
-//                             <div class="modal-more__content">
-//                                 <h4>${data.name}</h4>
-//                                 <h4>${data.surname}</h4>
-//                                  <p>${data.phone}</p>
-//                                  <p>${data.weekKpi}</p>
-//                                  <p>${data.monthKpi}</p>
-//                                  <button>Изменить данные</button>
-//                            </div>
-//                         </div>
-//                    </div>
-//             `);
+async function getStudentToMore(event) {
+  let id = event.currentTarget.id;
+  let response = await axios(`${API}/${id}`);
+  let { data } = response;
+  modalM.html("");
+  modalM.append(`
+                <div class="modal-podrob ">
+                        <div class="modal-more d-flex">
+                            <div class="modal-more-img-block"> <img modal-more__img src="${data.image}" width="200px" hight="300px" alt=""></div>
+                            <div class="modal-more__content">
+                                <h4> Имя: ${data.name}</h4>
+                                <h4> Фамилия: ${data.surname}</h4>
+                                 <p> Номер телефона: ${data.phone}</p>
+                                 <p> KPI в этой неделе: ${data.weekKpi}</p>
+                                 <p> KPI в этом мецясе: ${data.monthKpi}</p>
+                                 <button>Изменить данные</button>
+                                 <div class="student-page-close">&#10060</div>
+                           </div>
+                        </div>
+                </div>
+            `);
 
-//   $(".podrob").attr("id", id);
-// }
+  $(".podrob").attr("id", id);
+}
 
-// $(document).on("click", ".podrob", getStudentToMore);
+$(document).on("click", ".podrob", getStudentToMore, );
+let studentPage = $(".modal-podrob")
+
+$(document).on("click", ".student-page-close", () =>{
+     studentPage.css("display", "none")
+})
+
+
+// Сабытыя modal Registratsiya
+
+let modalMain = $(".modal-main");
+let openReg = $(".open-reg");
+let modalClose = $(".modal-close");
+
+openReg.on("click", () => {
+    modalMain.css("display", "flex")
+})
+
+modalClose.on("click", () => {
+    modalMain.css("display", "none")
+})
+
+
+
+// Сабытыя User table
+
+let modalStudent = $(".users");
+let openTable = $(".open-student");
+let tableClose = $(".users-close-btn");
+
+openTable.on("click", () => {
+    modalStudent.css("display", "block")
+})
+
+tableClose.on("click", () => {
+    modalStudent.css("display", "none")
+})
+
+
+// Student page
+
