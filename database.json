@@ -1,15 +1,6 @@
 {
   "students": [
     {
-      "name": "Saparali",
-      "surname": "Akmatali uulu",
-      "phone": "0755410910",
-      "weekKpi": "101",
-      "monthKpi": "101",
-      "image": "https://cdn.pocket-lint.com/r/s/320x/assets/images/151442-cameras-feature-stunning-photos-from-the-national-sony-world-photography-awards-2020-image1-1y52ltoia3.jpg?v1",
-      "id": 2
-    },
-    {
       "name": "argfsd",
       "surname": "resgfvd",
       "phone": "ergfv",
@@ -26,6 +17,23 @@
       "monthKpi": "10005",
       "image": "https://mymodernmet.com/wp/wp-content/uploads/2019/12/matt-molloy-sky-photographs-20.jpg",
       "id": 4
+    },
+    {
+      "name": "Erjan",
+      "surname": "Osmonov",
+      "phone": "123",
+      "weekKpi": "123",
+      "monthKpi": "123",
+      "image": "123",
+      "id": 5
+    },
+    {
+      "name": "E",
+      "surname": "e",
+      "phone": "e",
+      "weekKpi": "e",
+      "monthKpi": "e",
+      "id": 6
     }
   ]
 }

@@ -10,11 +10,15 @@
 </head>
 <body>
 
-    <div class="open-reg">
-        Регистрация
+    <div>
+        <button class="open-reg">
+            Регистрация
+        </button>
     </div>
-    <div class="open-student">
-        Наши студенты
+    <div>
+        <button class="open-student">
+            Наши студенты   
+        </button>
     </div>
 
     <div class="modal-main">
@@ -31,7 +35,6 @@
                     <input type="text" class="inp-phone input" placeholder="Enter phone number">
                     <input type="text" class="inp-week_KPI input" placeholder="Enter week KPI">
                     <input type="text" class="inp-month_KPI input" placeholder="Enter month KPI">
-                    <input type="text" class="inp-image input" placeholder="Enter image">
                     <button class="button-send" type="submit">Send</button>
                 </form>
                 
@@ -42,8 +45,7 @@
     <div class="users">
         <div class="container-main container">
             <div class="users-title">
-                <div class="users-close-btn">&#10006;</div>
-                <h4>Ползователи</h4>
+                <h4>Пользователи</h4>
             </div>
             <table class="table users-table">
                 <thead>
@@ -51,27 +53,42 @@
                         <th>№</th>
                         <th>Имя</th>
                         <th>Фамилия</th>
-                        <th> Телефон номер</th>
-                        <th> week KPI</th>
-                        <th> month KPI</th>
+                        <th>Номер телефона</th>
+                        <th>Week KPI</th>
+                        <th>Month KPI</th>
                         <th>Подробнее</th>
-                        <th>&#10060</th>
+                        <th>&#10060;</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
+            <nav aria-label="Page navigation example pagination-box">
+                <ul class="pagination">
+                  
+                </ul>
+            </nav>
         </div>
     </div>
 
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          
-        </ul>
-    </nav>
     
     <div class="container">
-        <div class="modal-m">
-            
+        <div class="modal-podrob">
+            <div class="modal-podrob__content">
+                <div class="modal-podrob__header">
+                    <h4>Изменить</h4>
+                    <button class="modal-edit-close">&#10060</button>
+                </div>
+                <div class="modal-podrob__body">
+                    <form class="edit-form">
+                        <input type="text" class="inp-edit-name input" placeholder="Enter name">
+                        <input type="text" class="inp-edit-surname input" placeholder="Enter surname">
+                        <input type="text" class="inp-edit-phone input" placeholder="Enter phone number">
+                        <input type="text" class="inp-edit-week_KPI input" placeholder="Enter week KPI">
+                        <input type="text" class="inp-edit-month_KPI input" placeholder="Enter month KPI">
+                        <button class="button-edit" type="submit">Изменить</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
