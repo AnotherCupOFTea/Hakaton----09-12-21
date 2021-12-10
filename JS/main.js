@@ -155,9 +155,22 @@ async function saveEditedStudent(event) {
 
 editForm.on("submit", saveEditedStudent);
 
+// ! Search
+
+let searchInp = $(".search-inp");
+
+function liveSearch(event) {
+  let value = event.target.value;
+  let newAPI = `${API}?q=${value}`;
+  currentPage = 1;
+  getStudent(newAPI);
+}
+
+searchInp.on("input", liveSearch);
+
 // ! Pagination
 
-const productsPerPages = 2;
+const productsPerPages = 5;
 let pagesCount = 1;
 let currentPage = 1;
 let totalProductsCount = 0;
