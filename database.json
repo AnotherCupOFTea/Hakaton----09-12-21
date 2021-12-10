@@ -17,6 +17,15 @@
       "monthKpi": "wegav",
       "image": "rgsevx",
       "id": 3
+    },
+    {
+      "name": "Saparali",
+      "surname": "Akmatali",
+      "phone": "uulu",
+      "weekKpi": "102",
+      "monthKpi": "10005",
+      "image": "https://mymodernmet.com/wp/wp-content/uploads/2019/12/matt-molloy-sky-photographs-20.jpg",
+      "id": 4
     }
   ]
 }

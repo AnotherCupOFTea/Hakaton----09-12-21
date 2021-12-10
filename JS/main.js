@@ -151,6 +151,32 @@ function nextPage() {
 
 $(document).on("click", ".prev-item", prevPage);
 $(document).on("click", ".next-item", nextPage);
+<<<<<<< HEAD
+=======
+async function getStudent(API) {
+  let response = await axios(API);
+  let student = response.data;
+  tbody.html("");
+  student.forEach((item) => {
+    tbody.append(`
+        <tr>
+            <td class="td">${item.id - 1}</td>
+            <td class="td">${item.name}</td>
+            <td class="td">${item.surname}</td>
+            <td class="td">${item.phone}</td>
+            <td class="td">${item.weekKpi}</td>
+            <td class="td">${item.monthKpi}</td>
+            <td>
+               <button class="btn btn-outline-warning podrob" id="${item.id}">Подробнее</button>
+            </td>
+            <td>
+                <button id="${item.id}" class="btn btn-outline-warning btn-delete">	&#10060</button>
+             </td>
+        </tr>
+    `);
+  });
+}
+>>>>>>> 799983b1380ea20d0a7837bb62403152df880b17
 
 render(products);
 
@@ -173,6 +199,7 @@ async function getStudentToMore(event) {
   modalM.append(`
                 <div class="modal-podrob ">
                         <div class="modal-more d-flex">
+<<<<<<< HEAD
                             <div class="modal-more__img"> <img src="${data.image}" alt=""></div>
                             <div class="modal-more__content">
                                 <h4>${data.name}</h4>
@@ -184,9 +211,68 @@ async function getStudentToMore(event) {
                            </div>
                         </div>
                    </div>
+=======
+                            <div class="modal-more-img-block"> <img modal-more__img src="${data.image}" width="200px" hight="300px" alt=""></div>
+                            <div class="modal-more__content">
+                                <h4> Имя: ${data.name}</h4>
+                                <h4> Фамилия: ${data.surname}</h4>
+                                 <p> Номер телефона: ${data.phone}</p>
+                                 <p> KPI в этой неделе: ${data.weekKpi}</p>
+                                 <p> KPI в этом мецясе: ${data.monthKpi}</p>
+                                 <button>Изменить данные</button>
+                                 <div class="student-page-close">&#10060</div>
+                           </div>
+                        </div>
+                </div>
+>>>>>>> 799983b1380ea20d0a7837bb62403152df880b17
             `);
 
   $(".podrob").attr("id", id);
 }
+<<<<<<< HEAD
 
 $(document).on("click", ".podrob", getStudentToMore);
+=======
+
+$(document).on("click", ".podrob", getStudentToMore, );
+let studentPage = $(".modal-podrob")
+
+$(document).on("click", ".student-page-close", () =>{
+     studentPage.css("display", "none")
+})
+
+
+// Сабытыя modal Registratsiya
+
+let modalMain = $(".modal-main");
+let openReg = $(".open-reg");
+let modalClose = $(".modal-close");
+
+openReg.on("click", () => {
+    modalMain.css("display", "flex")
+})
+
+modalClose.on("click", () => {
+    modalMain.css("display", "none")
+})
+
+
+
+// Сабытыя User table
+
+let modalStudent = $(".users");
+let openTable = $(".open-student");
+let tableClose = $(".users-close-btn");
+
+openTable.on("click", () => {
+    modalStudent.css("display", "block")
+})
+
+tableClose.on("click", () => {
+    modalStudent.css("display", "none")
+})
+
+
+// Student page
+
+>>>>>>> 799983b1380ea20d0a7837bb62403152df880b17
