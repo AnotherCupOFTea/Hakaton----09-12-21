@@ -119,7 +119,6 @@ async function getStudentToMore(event) {
   editForm.attr("id", id);
 }
 
-
 $(document).on("click", ".btn-edit", getStudentToMore);
 
 async function saveEditedStudent(event) {
@@ -253,4 +252,8 @@ $(document).on("click", "btn-edit", getStudentToMore);
 
 $(".modal-edit-close").on("click", () => {
   $(".modal-podrob").fadeToggle(500);
+});
+
+$(".img-btn").on("click", () => {
+  currentPage = 1;
 });
