@@ -279,6 +279,9 @@ td{
     background-position: 0;
   }
   
+  .btn-edit, .btn-delete{
+      margin: 0 auto;
+  }
 
 /* 768-992 */
 @media screen and (max-width:920px){
