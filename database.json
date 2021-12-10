@@ -1,31 +1,108 @@
 {
   "students": [
     {
-      "name": "argfsdasdasd",
-      "surname": "resgfvdasd",
-      "phone": "ergfvasd",
-      "weekKpi": "regfasdasd",
-      "monthKpi": "sd",
-      "image": "rgsevx",
+      "name": "Эржан",
+      "surname": "Осмонов",
+      "phone": "123908",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 1
+    },
+    {
+      "name": "Сапарали",
+      "surname": "Акматали",
+      "phone": "0810823",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 2
+    },
+    {
+      "name": "Тороев",
+      "surname": "Ажыбек",
+      "phone": "187293",
+      "weekKpi": "100",
+      "monthKpi": "100",
       "id": 3
     },
     {
-      "name": "Saparali",
-      "surname": "Akmatali",
-      "phone": "uulu",
-      "weekKpi": "102",
-      "monthKpi": "10005",
-      "image": "https://mymodernmet.com/wp/wp-content/uploads/2019/12/matt-molloy-sky-photographs-20.jpg",
-      "id": 4
+      "name": "Азат",
+      "surname": "Байышев",
+      "phone": "987413",
+      "weekKpi": "1000",
+      "monthKpi": "1000",
+      "id": 5
     },
     {
-      "name": "Erjan",
-      "surname": "Osmonov",
-      "phone": "123",
-      "weekKpi": "123",
-      "monthKpi": "123",
-      "image": "123",
-      "id": 5
+      "name": "Адилет",
+      "surname": "Атамбаев",
+      "phone": "612833",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 6
+    },
+    {
+      "name": "Тилеген",
+      "surname": "Асанкулов",
+      "phone": "12873981",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 7
+    },
+    {
+      "name": "Тариель",
+      "surname": "Иманкулов",
+      "phone": "1972838",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 8
+    },
+    {
+      "name": "Аиша",
+      "surname": "Абазбекова",
+      "phone": "1120873",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 9
+    },
+    {
+      "name": "Раул",
+      "surname": "Баттер",
+      "phone": "109238",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 10
+    },
+    {
+      "name": "Бексултан",
+      "surname": "Бексултанов",
+      "phone": "871238",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 11
+    },
+    {
+      "name": "Бегимай",
+      "surname": "Бегимаева",
+      "phone": "1902380",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 12
+    },
+    {
+      "name": "Айгерим",
+      "surname": "Герова",
+      "phone": "120983",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 13
+    },
+    {
+      "name": "Бермет",
+      "surname": "Берметова",
+      "phone": "1023808",
+      "weekKpi": "100",
+      "monthKpi": "100",
+      "id": 14
     }
   ]
 }
