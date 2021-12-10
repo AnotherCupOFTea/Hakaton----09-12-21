@@ -106,16 +106,9 @@ body {
 }
 
 .users{
-    /* background: rgba(0, 0, 0, 0.83); */
-    /* width: 100%;
-    height: 80%; */
     display: flex;
-    /* position: absolute; */
-    top: 0;
+    top: 50px;
     left: 0;
-    
-    /* justify-content: center;
-    align-items: center; */
     color: #fff;
 
 }
@@ -130,7 +123,8 @@ body {
     background: rgb(22, 21, 21);
     position: relative;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 90px;
+    border: 1px solid#fff;
 }
 
 .users-close-btn{
@@ -209,4 +203,25 @@ td{
 }
 .pagination {
     justify-content: center;
+}
+
+
+/*  */
+
+.header-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    z-index: -1;
+}
+
+.nav{
+    margin-top: 17px;
+}
+
+.img{
+    width: 100px;
 }
