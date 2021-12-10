@@ -96,7 +96,7 @@ $(document).on("click", ".btn-delete", deleteStudent);
 
 //  взять данные на копкку подробнее
 
-let editForm = $(".inp-edit-form");
+let editForm = $(".edit-form");
 let editName = $(".inp-edit-name");
 let editSurname = $(".inp-edit-surname");
 let editPhone = $(".inp-edit-phone");
@@ -148,6 +148,8 @@ async function saveEditedStudent(event) {
 
   await axios.patch(`${API}/${id}`, newTask);
   $(".modal-podrob").fadeToggle(500);
+  getStudent(API);
+  handlePagination();
 }
 
 editForm.on("submit", saveEditedStudent);
