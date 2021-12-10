@@ -1,11 +1,11 @@
 {
   "students": [
     {
-      "name": "argfsd",
-      "surname": "resgfvd",
-      "phone": "ergfv",
-      "weekKpi": "regf",
-      "monthKpi": "wegav",
+      "name": "argfsdasdasd",
+      "surname": "resgfvdasd",
+      "phone": "ergfvasd",
+      "weekKpi": "regfasdasd",
+      "monthKpi": "sd",
       "image": "rgsevx",
       "id": 3
     },
@@ -26,14 +26,6 @@
       "monthKpi": "123",
       "image": "123",
       "id": 5
-    },
-    {
-      "name": "E",
-      "surname": "e",
-      "phone": "e",
-      "weekKpi": "e",
-      "monthKpi": "e",
-      "id": 6
     }
   ]
 }
